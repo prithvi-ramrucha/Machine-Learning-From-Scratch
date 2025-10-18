@@ -73,7 +73,6 @@ class BaseSVC:
         """Translating into CVXOPT formalism."""
 
         # Objective function,
-        self.Q_matrix = np.outer(self.y, self.y) * np.dot(self.X, self.X.T)
         P_matrix_obj = matrix(self.Q_matrix.astype(np.double)) # <-- Wrapping the matrix  
         q_vector_obj = matrix(-1*ones_vector)
 
